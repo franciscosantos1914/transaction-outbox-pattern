@@ -12,7 +12,7 @@ const producers = kafka.producer({
 await producers.connect()
 
 export async function sendPacket(topic, packet) {
-    throw new Error("An Unknown Error")
+    //throw new Error("An Unknown Error")
     return await producers.send({
         topic,
         messages: [{ value: JSON.stringify(packet) }]
